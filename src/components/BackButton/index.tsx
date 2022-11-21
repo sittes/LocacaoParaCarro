@@ -1,0 +1,64 @@
+import React from 'react';
+import { colors } from 'react-native-elements';
+//import { Title } from 'react-native-paper';
+import {Container} from './styles';
+import Icon from 'react-native-vector-icons/AntDesign'
+import {useTheme} from 'styled-components'
+
+interface Props {
+  
+    color?: string;
+    onPress: () => void;
+}
+
+export function BackButton({
+    
+    color,
+    onPress
+}: Props ){
+   const theme = useTheme();
+
+	return(
+	<Container color={color ? color : theme.colors.main} onPress={onPress}>
+      
+      <Icon name="arrowleft" size={25} color="#000"/>
+       
+    </Container>
+);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// import React from 'react';
+// import Icon from 'react-native-vector-icons/AntDesign'
+// import {Container} from './styles';
+
+// export function BackButton(){
+// 	return(
+// 	<Container>
+      
+//           <Icon name="arrowleft" size={25} color="#000"/>
+       
+//     </Container>
+// );
+// }
